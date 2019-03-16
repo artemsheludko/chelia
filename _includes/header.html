@@ -11,7 +11,7 @@
         {% if page.url contains url.url %}
           {% assign class = ' menu-link--active' %}
         {% endif %}
-        <li class="menu-item"><a href="{{ url.url }}" class="menu-link {{ class }}"><i class="{{ url.icon }}"></i> {{ url.name }}</a></li>
+        <li class="menu-item"><a href="{{ site.baseurl }}/{{ url.url }}" class="menu-link {{ class }}"><i class="{{ url.icon }}"></i> {{ url.name }}</a></li>
       {% endfor %}
     </ul>
   </nav>
