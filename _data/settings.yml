@@ -5,9 +5,9 @@ title: Chris Hadley | My personal website
 
 # Here you can add link in main menu
 menu:
-- {name: Work, url: '/work', icon: 'ion ion-ios-briefcase'}
-- {name: Blog, url: '/blog', icon: 'ion ion-ios-paper'}
-- {name: Contact, url: '/contact', icon: 'ion ion-ios-mail'}
+- {name: Work, url: 'work', icon: 'ion ion-ios-briefcase'}
+- {name: Blog, url: 'blog', icon: 'ion ion-ios-paper'}
+- {name: Contact, url: 'contact', icon: 'ion ion-ios-mail'}
 
 #-------------------------------
 # About Section
