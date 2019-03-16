@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+  {% if site.data.settings.google-analytics-ua %}
+    {% include google-analytics.html %}
+  {% endif %}
+  
+  <!-- begin container-full -->
+  <div class="container-full">
+    <!-- begin canvas -->
+    <div id="canvas">
+      <div class="row animated">
+        
+        <!-- begin section-top -->
+        <div class="section-top">
+          {% include header.html %}
+          {% if page.id %}
+            <div class="hero rellax animate-hero animate-element--fadein" {% if page.image %} style="background-image: url({{"/images/" | prepend: site.baseurl | append : page.image}})" {% else %} style="background-image: url(https://via.placeholder.com/1920x1080)" {% endif %} ></div> <!-- /.hero -->
+          {% else %}
+            <div class="hero rellax animate-hero animate-element--fadein" {% if page.image %} style="background-image: url({{"/images/" | prepend: site.baseurl | append : page.image}})" {% else %} style="background-image: url(https://via.placeholder.com/1920x1080)" {% endif %}></div> <!-- /.hero -->
+          {% endif %}
+        </div>
+        <!-- end section-top -->
+      
+        <!-- begin section-content -->
+        <div class="section-content">
+          
+          <div class="main animate-main animate-element--fadein">{{ content }}</div> <!-- /.main -->
+          {% include footer.html %}
+        </div>
+        <!-- end section-content -->
+        
+      </div>
+    </div>
+    <!-- end canvas -->
+  </div>
+  <!-- end container-full -->
+  {% include javascripts.html %}
+</body>
+
+</html>

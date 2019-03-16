@@ -1,0 +1,142 @@
+// Header
+.header {
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+  background: $dark;
+  z-index: 10 !important;
+}
+
+.menu-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 60px;
+  margin: 0 auto;
+  .hamburger-icon {
+    position: absolute;
+    display: inline-block;
+    padding: 15px 30px 15px 0;
+    font-size: 24px;
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+.menu-nav {
+  width: 750px;
+  max-width: 100%;
+  margin: 0 auto;
+  &.is-open {
+    .menu-list {
+      overflow: visible;
+      .menu-item {
+        max-height: 700px;
+        transition: all 250ms;
+        opacity: 1;
+      }
+    }
+  }
+
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    &:hover {
+      .menu-item {
+        .menu-link {
+          opacity: 0.5;
+        }
+        &:hover {
+          .menu-link {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .menu-item {
+      width: 100%;
+      max-height: 0;
+      text-align: left;
+      opacity: 0;
+    }
+    .menu-link {
+      position: relative;
+      width: 100%;
+      display: inline-block;
+      padding: 20px 0;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: rgba($white, 0.7);
+      &:hover,
+      &--active {
+        color: $white;
+      }
+      .ion {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.sticky-wrapper {
+  background: $dark;
+  &.is-sticky {
+    .menu-nav {
+      .menu-link {
+        padding: 12px 0;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// Media
+@media only screen and (min-width: 576px) {
+  .menu-icon {
+    display: none;
+    border-bottom: none;
+  }
+
+  .menu-nav {
+    display: block;
+    .menu-list {
+      flex-direction: row;
+      overflow: visible;
+      
+      .menu-item {
+        width: 25%;
+        max-height: 100%;
+        text-align: center;
+        border-left: 1px solid darken($dark, 10%);
+        opacity: 1;
+        &:last-child {
+          border-right: 1px solid darken($dark, 10%);
+        }
+      }
+
+      .menu-link {
+        padding: 15px 0;
+        font-size: 14px;
+        border-bottom: none;
+        &--active {
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 0;
+            height: 0;
+            border-top: 5px solid $dark;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

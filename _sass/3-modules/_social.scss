@@ -1,0 +1,16 @@
+// Social
+.social-list {
+  text-align: center;
+}
+.social-item {
+  display: inline-block;
+  padding: 0 5px;
+  
+  .social-link {
+    font-size: 21px;
+    color: inherit;
+    &:hover {
+      color: $red;
+    }
+  }
+}

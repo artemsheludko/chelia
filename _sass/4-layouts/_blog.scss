@@ -1,0 +1,58 @@
+// Blog
+.article {
+  display: flex;
+  align-items: center;
+}
+
+.article-counter {
+  span {
+    display: none;
+    width: 60px;
+    height: 60px;
+    font-size: 21px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 60px;
+    border-radius: 50%;
+    color: $white;
+    background: $red;
+  }
+}
+
+.article-content {
+  .article-title {
+    margin-bottom: 15px;
+    font-size: 33px;
+    line-height: 43px;
+  }
+
+  .article-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    span {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: $dark;
+    }
+  }
+  
+  .article-excerpt {
+    margin-bottom: 0;
+  }
+}
+
+// Media
+@media only screen and (min-width: 576px) {
+  .article-counter {
+    span {
+      display: inline-block;
+    }
+  }
+
+  .article-content {
+    padding-left: 50px;
+  }
+}

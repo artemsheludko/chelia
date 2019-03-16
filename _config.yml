@@ -1,0 +1,16 @@
+# General settings of the site you can find at /_data/settings.yml
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+include: ['_pages']
+
+sass:
+  sass_dir: _sass
+  style: compressed

@@ -1,0 +1,23 @@
+// Footer
+.footer {
+  background: $dark;
+
+  .footer-box {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 50px 20px 30px;
+    color: $white;
+    
+    .copyright {
+      text-align: center;
+      font-size: 12px;
+      color: rgba($white, .5);
+      a {
+        color: rgba($white, .5);
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}

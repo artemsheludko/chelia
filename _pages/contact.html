@@ -1,0 +1,29 @@
+---
+layout: page
+title: Get In Touch
+image: 03.jpg
+permalink: /contact/
+---
+<!-- begin form-box -->
+<div class="form-box">
+  <form class="form" method="POST" action="{% if site.data.settings.email %}https://formspree.io/{{site.data.settings.email}}{% else %}#{% endif %}">
+    <div class="form-group">
+      <div class="form-item form-name">
+        <label for="">Your Name</label>
+        <input type="text" name="name" required>
+      </div>
+      <div class="form-item form-email">
+        <label for="">Your Email</label>
+        <input type="email" name="email" required>
+      </div>
+    </div>
+    <div class="form-item">
+      <label for="">Tell me about your project</label>
+      <textarea name="text" id="" cols="30" rows="10" required></textarea>
+    </div>
+    <div class="form-item">
+      <button class="form-button" type="submit">Send</button>
+    </div>
+  </form>
+</div>
+<!-- end form-box -->

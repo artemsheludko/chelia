@@ -1,0 +1,32 @@
+$primary-color: #3c2b38;
+$red: #c74343;
+$lightred:#AE4D4D;
+$gray: #666666;
+$lightgray: #f3f3f3;
+$dark: #2F2C36;
+$white:#FFFFFF;
+
+$accent-color: #000000;
+
+$danger: #e02f40;
+$success: #34a74e;
+
+// Background Colors
+$background: $white;
+
+// Body Color
+$text-color: $dark;
+
+// Headings
+$heading-font-color: $dark;
+
+// Links
+$link-color: $red;
+$link-color-hover: darken($dark, 15%);
+
+// Button
+$button-color: $white;
+$button-background-color: $primary-color;
+
+// Border
+$border-color: #A84496;

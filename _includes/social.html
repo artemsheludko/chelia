@@ -1,0 +1,9 @@
+<ul class="social-list">
+  {% for social in site.data.settings.social %}
+  {% for i in (1..1) %}
+  <li class="social-item">
+    <a href="{{ social.link }}" class="social-link" target="_blank"><i class="ion {{social.icon }}"></i></a>
+  </li>
+  {%endfor %}
+  {% endfor %}
+</ul>

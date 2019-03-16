@@ -1,0 +1,52 @@
+// Contact
+.form {
+	width: 550px;
+	max-width: 100%;
+	margin: 0 auto;
+
+	.form-group {
+		display: flex;
+	}
+
+	.form-item {
+		width: 100%;
+		label {
+			display: block;
+		}
+		input, textarea {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			font-size: 16px;
+			border: 2px solid $gray;
+			transition: $global-transition;
+		}
+		textarea {
+			height: 200px;
+			resize: none;
+		}
+		[type="submit"] {
+	    width: 33%;
+	    padding: 20px;
+      font-size: 18px;
+      border: none;
+	    outline: none;
+	    cursor: pointer;
+	    color: $white;
+	    background: $red;
+	    transition: $global-transition;
+	    &:hover {
+	    	background: $dark;
+	    }
+	  }
+	}
+	
+	.form-name, .form-email {
+		&:nth-child(1) {
+			padding-right: 10px;
+		}
+		&:nth-child(2) {
+			padding-left: 10px;
+		}
+	}
+}

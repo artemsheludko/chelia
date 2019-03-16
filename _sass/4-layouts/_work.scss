@@ -1,0 +1,77 @@
+// Work
+.work-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.work-item {
+  position: relative;
+  width: 50%;
+  padding: 10px;
+  overflow: hidden;
+  &:hover {
+    .work-image {
+      transform: scale(1.2) translateY(-50px);
+    }
+    .work-overlay {
+      bottom: 10px;
+    }
+  }
+
+}
+
+.work-image-container {
+  overflow: hidden;
+  .work-image {
+    border-radius: $global-radius;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s;
+    &:after {
+      content: "";
+      display: block;
+      padding-top: 70%;
+    }
+  }
+}
+
+.work-overlay {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  text-align: center;
+  background: $white;
+  transition: all 0.5s;
+}
+
+// Some Featherlight Styles
+.featherlight {
+  .featherlight-close-icon {
+    top: 15px;
+    right: 20px;
+    font-size: 27px;
+    outline: none;
+    color: $white;
+    background: none;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    transition: $global-transition;
+    &:hover {
+      transform: rotate(90deg);
+    }
+    &:active {
+      transform: scale(0.9) rotate(90deg);
+    }
+  }
+  .featherlight-content {
+    padding: 0;
+    border-bottom: none;
+    .caption {
+      position: relative;
+      bottom: 50px;
+      height: 0;
+      text-align: center;
+      font-weight: 700;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+      color: $white;
+    }
+  }
+}

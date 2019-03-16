@@ -1,0 +1,70 @@
+// Post
+.post {
+  .post-title {
+    margin-bottom: 5px;
+    font-size: 27px;
+    line-height: 35px;
+    text-align: center;
+  }
+  .post-date {
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: $gray;
+  }
+}
+
+.post-share {
+  display: flex;
+  .share-title {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .share-list {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    .share-item {
+      display: inline-block;
+      margin: 0 15px;
+      line-height: 0;
+      i {
+        font-size: 18px;
+        color: $primary-color;
+        transition: $global-transition;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+.comments {
+  margin-top: 50px;
+}
+
+// Media
+@media only screen and (min-width: 576px) {
+  .post {
+    .post-title {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+  
+  .post-share {
+    .share-list {
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        display: block;
+        width: calc(100% - 190px);
+        height: 1px;
+        background: $lightgray;
+      }
+    }
+  }
+}

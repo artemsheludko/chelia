@@ -1,0 +1,334 @@
+// Hero
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: lighten($dark, 70%);
+  &:before {
+    content: "";
+    display: block;
+    padding-bottom: 35%;
+  }
+}
+
+// Main
+.section-top,
+.section-content {
+  position: relative;
+  width: 100%;
+}
+
+.section-content {
+  background: $white;
+}
+
+.section-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  font-size: 27px;
+  .ion {
+    margin-right: 15px;
+    color: $dark;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  padding: 0 20px;
+  margin: 50px auto;
+  background: $white;
+}
+
+// Profile User
+.profile-user {
+  margin-top: -125px;
+  text-align: center;
+}
+
+.avatar-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.avatar-link {
+  display: block;
+  width: 130px;
+  height: 130px;
+  margin-bottom: 25px;
+  border: 5px solid $white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.info-user {
+  .user-name {
+    display: block;
+    font-size: 27px;
+    text-transform: uppercase;
+  }
+  .user-job {
+    font-size: 14px;
+    color: $gray;
+  }
+}
+
+.user-description {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 21px;
+  letter-spacing: 0.02em;
+  line-height: 27px;
+}
+
+// Skills
+.chart-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chart-item {
+  flex-basis: 50%;
+  text-align: center;
+  margin-bottom: 40px;
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.chart {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 120px;
+  margin: 0 auto 5px;
+}
+
+// Experience and Education
+.experience-item,
+.education-item {
+  margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .company-name,
+  .degree {
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $red;
+    .duration,
+    .years {
+      font-size: 12px;
+      color: $gray;
+    }
+  }
+  .job-position,
+  .organization {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .experience-description,
+  .education-description {
+    font-size: 16px;
+    line-height: 21px;
+    color: $gray;
+  }
+}
+
+// Clients
+.clients {
+  margin-bottom: 50px;
+}
+
+.client-quote {
+  margin-bottom: 40px;
+  p {
+    margin-bottom: 0;
+  }
+  .ion {
+    font-size: 27px;
+    color: $gray;
+  }
+}
+
+.client-info {
+  text-align: center;
+  .client-name {
+    display: block;
+    font-size: 18px;
+  }
+  .client-title {
+    color: $gray;
+    font-style: normal;
+  }
+}
+
+.slick-list {
+  margin-bottom: 60px;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+
+  li {
+    font-size: 0;
+    &.slick-active {
+      button {
+        background: $red;
+      }
+    }
+  }
+
+  button {
+    width: 30px;
+    height: 4px;
+    margin: 0 .5rem;
+    border: 0;
+    background-color: lighten($gray, 40%);
+    outline: 0;
+    cursor: pointer;
+  }
+
+}
+
+.dots-item-active {
+  background: $red;
+}
+
+// Media
+@media only screen and (min-width: 992px) {
+  .main {
+    margin: 60px auto;
+  }
+}
+
+
+// CSS Page Transitions
+.animated {
+
+  &.is-exiting {
+    .animate-main {
+      animation-direction: alternate-reverse;
+    }
+  }
+  .animate-main {
+    -webkit-animation-duration: 0.25s;
+            animation-duration: 0.25s;
+    -webkit-transition-timing-function: ease-in;
+        -o-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+
+  .animate-hero {
+    -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
+    -webkit-transition-timing-function: ease-in;
+        -o-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+
+  /** An element that fades in */
+  .animate-element--fadein {
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+  }
+
+  /** An element that fades in and slides up */
+  .animate-element--fadeinup {
+    -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+  }
+
+  /** An element that fades in and slides from the right */
+  .animate-element--fadeinright {
+    -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Media
+@media only screen and (min-width: 576px) {
+  .chart-item {
+    flex-basis: 33.333%;
+  }
+  
+  .experience-item,
+  .education-item {
+  .company-name,
+  .degree {
+      padding-left: 20px;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $red;
+      }
+    }
+  }
+}

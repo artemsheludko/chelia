@@ -1,0 +1,34 @@
+---
+layout: page
+title: My Journal
+image: 04.jpg
+permalink: /blog/
+---
+{% if site.posts.size > 0 %}
+	{%- for post in site.posts -%}
+
+		<!-- begin article -->
+		<article class="article">
+			<div class="article-counter">
+				<span>{{ forloop.index }}</span>
+			</div>
+			
+			<div class="article-content">
+				<div class="article-info">
+					<span class="article-date"><time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%B %-d, %Y" %}{{ post.date | date: date_format }}</time></span>&nbsp;&nbsp;—&nbsp;&nbsp;
+					<span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words |
+						plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
+				</div>
+				<h2 class="article-title">
+					<a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+				</h2>
+				<p class="article-excerpt">{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | truncatewords: 25 }}{% endif %}</p>
+			</div>
+
+		</article>
+		<!-- end article -->
+
+		<hr>
+
+	{% endfor %}
+{% endif %}

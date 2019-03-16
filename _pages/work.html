@@ -1,0 +1,25 @@
+---
+layout: page
+title: Last Works
+image: 02.jpg
+permalink: /work/
+---
+<!-- begin works -->
+<div class="works">
+  <div class="work-box">
+    {% for project in site.data.settings.projects %}
+    <div class="work-item">
+      <div class="work-image-container">
+        <a class="work-popup-link" href="{{ site.baseurl }}/images/work/{{ project.image }}">
+          <div class="work-image" {% if project.image %} style="background-image: url({{"/images/work/" | prepend: site.baseurl | append :
+        project.image}})" {% else %} style="background-image: url(https://via.placeholder.com/1280x720)" {% endif %} title="{{project.name}} by {{ site.data.settings.name }}"></div>
+        </a>
+      </div>
+      <div  class="work-overlay">
+        <strong>{{ project.name }}</strong>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- end works -->

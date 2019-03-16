@@ -1,0 +1,19 @@
+<!-- begin header -->
+<header class="header col-12 col-d-5">
+  <div class="menu-icon">
+    <i class="hamburger-icon ion ion-ios-menu"></i>
+  </div>
+  <nav class="menu-nav">
+    <ul class="menu-list list-reset">
+      <li class="menu-item"><a href="{{ site.baseurl }}/" class="menu-link {% if page.url == '/' %} menu-link--active {% endif %}"><i class="ion ion-ios-home"></i> Home</a></li>
+      {% for url in site.data.settings.menu %}
+        {% assign class = nil %}
+        {% if page.url contains url.url %}
+          {% assign class = ' menu-link--active' %}
+        {% endif %}
+        <li class="menu-item"><a href="{{ url.url }}" class="menu-link {{ class }}"><i class="{{ url.icon }}"></i> {{ url.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
+<!-- end header -->

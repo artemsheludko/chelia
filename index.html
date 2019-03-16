@@ -1,0 +1,100 @@
+---
+layout: default
+image: 01.jpg
+---
+<!-- THIS IS HOME PAGE -->
+
+<!-- begin profile-user -->
+<div class="profile-user">
+  <div class="avatar-box">
+    <a href="{{ site.baseurl }}/" class="avatar-link"><img src="{% if site.data.settings.avatar %}  {{ site.baseurl }}/images/{{ site.data.settings.avatar }} {% else %} https://via.placeholder.com/150x150 {% endif %}" alt="{{ site.data.settings.name }}" class="avatar"></a>
+    <div class="info-user">
+      <strong class="user-name">{{ site.data.settings.name }}</strong>
+      <span class="user-job">{{ site.data.settings.my-job }}</span>
+    </div>
+  </div>
+  <div class="user-description">{{ site.data.settings.description }}</div>
+  {% include social.html %}
+</div>
+<!-- end profile-user -->
+
+<hr>
+
+<!-- begin skills -->
+<div class="skills">
+  <h2 class="skill-title section-title"><i class="ion ion-ios-desktop"></i> {{ site.data.settings.skills-title }}</h2>
+  <div class="chart-box">
+  {% for skill in site.data.settings.skills %}
+    {% for i in (1..1) %}
+    <div class="chart-item">
+      <div class="chart" data-percent="{{ skill.value }}"><span class="percent">{{ skill.value }}</span>%</div>
+      <span class="chart-title">{{ skill.name }}</span>
+    </div>
+    {% endfor %}
+  {% endfor %}
+  </div>
+</div>
+<!-- end skills -->
+
+<hr>
+
+<!-- begin experience -->
+<div class="experience">
+  <h2 class="experience-title section-title"><i class="ion ion-ios-briefcase"></i> {{ site.data.settings.experience-title }}</h2>
+  <ul class="experience-list list-reset">
+    {% for experience in site.data.settings.experience %}
+      {% for i in (1..1) %}
+      <li class="experience-item">
+        <h3 class="company-name">{{ experience.company-name }} / <span class="duration">{{ experience.duration }}</span></h3>
+        <h5 class="job-position">{{ experience.job-position }}:</h5>
+        <div class="experience-description">{{ experience.description }}</div>
+      </li>
+      {% endfor %}
+    {% endfor %}
+  </ul>
+</div>
+<!-- end experience -->
+
+<hr>
+
+<!-- begin education -->
+<div class="education">
+  <h2 class="education-title section-title"><i class="ion ion-ios-school"></i> {{ site.data.settings.education-title
+    }}</h2>
+    <ul class="education list-reset">
+      {% for education in site.data.settings.education %}
+        {% for i in (1..1) %}
+        <li class="education-item">
+          <h3 class="degree">{{ education.degree }} / <span class="years">{{ education.years }}</span></h3>
+          <h5 class="organization">{{ education.organization }}:</h5>
+          <div class="education-description">{{ education.description }}</div>
+        </li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+</div>
+<!-- end education -->
+
+<hr>
+
+<!-- begin clients -->
+<div class="clients">
+  <h2 class="clients-title section-title"><i class="ion ion-ios-person"></i> {{ site.data.settings.clients-title
+  }}</h2>
+  <div class="clients-box">
+    <ul class="clients-list siema slick list-reset">
+      {% for clients in site.data.settings.clients %}
+        {% for i in (1..1) %}
+        <li class="clients-item">
+          <div class="client-quote"><i class="ion ion-md-quote"></i> {{ clients.quote }}</div>
+          <div class="client-info">
+            <strong class="client-name">{{ clients.name }}</strong>
+            <em class="client-title">{{ clients.title }}</em>
+          </div>
+        </li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+<!-- end clients -->

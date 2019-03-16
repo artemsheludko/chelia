@@ -1,0 +1,136 @@
+#-------------------------------
+# General Site Settings
+
+title: Chris Hadley | My personal website 
+
+# Here you can add link in main menu
+menu:
+- {name: Work, url: '/work', icon: 'ion ion-ios-briefcase'}
+- {name: Blog, url: '/blog', icon: 'ion ion-ios-paper'}
+- {name: Contact, url: '/contact', icon: 'ion ion-ios-mail'}
+
+#-------------------------------
+# About Section
+
+avatar: 05.jpg
+name: Chris Hadley
+my-job: Designer & Illustrator
+description: I’m a product designer, illustrator & side-project enthusiast. I’m currently build great products at Pixel Media.
+email: chris@website.com
+
+#-------------------------------
+# Skills Section
+
+skills-title: Professional Skills
+skills:
+- {name: Communication, value: '90'}
+- {name: Learning, value: '95'} 
+- {name: Planning, value: '60'}
+- {name: Visual Design, value: '80'}
+- {name: UX Design, value: '85'}
+- {name: Programming, value: '70'}
+
+#-------------------------------
+# Experience Section
+
+experience-title: Experience
+experience:
+- {company-name: Industry Design & Media, duration: 2015 - 2018, job-position: Graphic and Web Designer in San Francisco, description: Raclette farm-to-table meditation succulents taiyaki chambray gentrify taxidermy literally biodiesel. Blog knausgaard poutine tacos vaporware chillwave.}
+
+- {company-name: Graphic Design, duration: 2011 - 2015, job-position: Senior Illustrator in Milan, description: Raclette farm-to-table meditation succulents taiyaki chambray gentrify taxidermy literally biodiesel. Blog knausgaard poutine tacos vaporware chillwave.}
+
+- {company-name: Pixel Media, duration: 2008 - 2011, job-position: Designer in Chicago, description: Raclette farm-to-table meditation succulents taiyaki chambray gentrify taxidermy literally biodiesel. Blog knausgaard poutine tacos vaporware chillwave.}
+
+#-------------------------------
+# Education Section
+
+education-title: Education
+education:
+- {degree: Master Degree, years: 2002 - 2006, organization: University of Creative Minds, description: Raclette farm-to-table meditation succulents taiyaki chambray gentrify taxidermy literally biodiesel. Blog knausgaard poutine tacos vaporware chillwave.}
+
+- {degree: Bachelores Degree, years: 1998 - 2002, organization: University of Creative Minds, description: Raclette farm-to-table meditation succulents taiyaki chambray gentrify taxidermy literally biodiesel. Blog knausgaard poutine tacos vaporware chillwave.}
+
+- {degree: Specialised Coursework, years: 1997 - 1998, organization: University of Boston, description: Raclette farm-to-table meditation succulents taiyaki chambray gentrify taxidermy literally biodiesel. Blog knausgaard poutine tacos vaporware chillwave.}
+
+#-------------------------------
+# Clients Section
+clients-title: Clienst
+clients:
+- {
+  name: "Dianna Smiley",
+  title: "Social Media, Co and Co",
+  quote: "<p><strong>Working with Chris was the highlight of my career.</strong> Art party before they sold out lo-fi cronut. Narwhal normcore kinfolk crucifix cronut coloring book man braid lomo fixie sartorial helvetica cornhole activated charcoal ethical.</p>"
+}
+- {
+  name: "Loki Bright",
+  title: "Director of Design, New Devi Art",
+  quote: "<p><strong>While we all felt that Chris was a great.</strong> Woke lumbersexual iceland truffaut blog, deep v poke ramps vexillologist heirloom flexitarian taxidermy lomo seitan gastropub. Bespoke vape next level meditation tattooed cred.</p>"
+}
+- {
+  name: "Korbyn Colon",
+  title: "Art Director, LTD Corporate",
+  quote: "<p><strong>Chillwave ethical enamel pin, fashion axe leggings.</strong> Bespoke franzen umami sustainable. Chambray keffiyeh cred sriracha. Hashtag street art humblebrag pok pok viral meggings tacos chambray narwhal gentrify woke etsy.</p>"
+}
+- {
+  name: "Gracelyn Mason",
+  title: "Journalist, The Best Newspaper",
+  quote: "<p><strong>Skateboard iceland distillery succulents dreamcatcher cloud bread ugh keffiyeh unicorn austin.</strong> Palo santo health goth forage four dollar toast. Thundercats ramps irony meggings lo-fi kogi. Activated charcoal pitchfork you probably haven't heard of them squid.</p>"
+}
+
+#-------------------------------
+# Work Section
+
+projects:
+- {
+  name: Design Talks, 
+  image: '10.jpg'
+}
+- {
+  name: Abstract Page, 
+  image: '11.jpg'
+}
+- {
+  name: Round Shapes, 
+  image: '12.jpg'
+}
+- {
+  name: Color Palette,
+  image: '13.jpg'
+}
+- {
+  name: Color Palette,
+  image: '14.jpg'
+}
+- {
+  name: Color Palette,
+  image: '15.jpg'
+}
+
+#-------------------------------
+# Social Settings
+
+social:
+- {link: "https://facebook.com", icon: ion-logo-facebook }
+- {link: "https://twitter.com", icon: ion-logo-twitter }
+- {link: "https://dribbble.com", icon: ion-logo-dribbble }
+- {link: "https://linkedin.com", icon: ion-logo-linkedin }
+- {link: "https://github.com", icon: ion-logo-github }
+
+# social network icons available (https://ionicons.com/): 'twitter' / 'facebook' / 'github' / 'pinterest' 'google-plus' / 'linkedin' / 'youtube' / 'instagram' / 'dribbble' /
+
+#-------------------------------
+# Comment Section (Disqus)
+disqus-identifier: mr-brown # Add your shortname for Disqus Comment. For example mr-brown
+
+
+#-------------------------------
+# Google Analytics Section
+
+# Analytics helps you understand who visits your website.
+# Learn more at: http://support.google.com/analytics/answer/1008065
+
+# NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
+
+#google-analytics-ua: UA-XXXXXX-X
+
+#-------------------------------

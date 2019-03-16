@@ -1,0 +1,34 @@
+// 0-SETTINGS
+@import '0-settings/global';
+@import '0-settings/colors';
+
+// 1-TOOLS
+@import '1-tools/normalize';
+@import '1-tools/reset';
+@import '1-tools/shared';
+@import '1-tools/syntax-highlighting';
+@import '1-tools/mixins';
+@import '1-tools/grid';
+@import '1-tools/ionicons';
+@import '1-tools/slick';
+@import '1-tools/featherlight';
+
+// 2-BASE
+@import '2-base/base';
+
+// 3-MODULES
+@import '3-modules/buttons';
+@import '3-modules/header';
+@import '3-modules/footer';
+@import '3-modules/social';
+
+// 4-LAYOUTS
+@import '4-layouts/home';
+@import '4-layouts/page';
+@import '4-layouts/blog';
+@import '4-layouts/work';
+@import '4-layouts/contact';
+@import '4-layouts/post';
+
+// 5-TRUMPS
+@import '5-trumps/helpers';
